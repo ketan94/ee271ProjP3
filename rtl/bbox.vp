@@ -262,21 +262,14 @@ module `mname()`
 
   
    //Finding the aliasing sig bit
+//;my $alias_sig = 0; 
+//;for(my $k=0; $k<4;$k++){
 always_comb begin
-   if (subSample_RnnnnU[0] == 1)begin 
-//;       my $alias_sig = 3;
+    if(subSample_RnnnnU & (1<<`$k`) == (1<<`$k`))begin 
+//;       $alias_sig = `$k`;
+    end
 end
-   else if(subSample_RnnnnU[1] == 1) begin 
-//;        my $alias_sig = 2; 
-end
-   else if(subSample_RnnnnU[2] == 1)begin 
-//;        my $alias_sig = 1;
-end
-   else if(subSample_RnnnnU[3] == 1)begin 
-//;         my $alias_sig = 0;
-end
-
-end
+//;}
  
    //Round LowerLeft and UpperRight for X and Y
    //; for( my $i = 0 ; $i < 2 ; $i++ ) {
@@ -293,7 +286,7 @@ end
 
    end // always_comb
 
-   //;		}
+   //;}
    //; }
 
    // ***************** End of Step 2 *********************

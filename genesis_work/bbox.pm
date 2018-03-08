@@ -26,9 +26,9 @@ sub get_OutfileSuffix {Genesis2::UniqueModule::private_to_me(); return ".v"};
       print STDERR "$self->{BaseModuleName}->to_verilog: Start user code\n" 
 	  if $self->{Debug} & 8;
       # <<< END PRE-GENERATED TO_VERILOG PREFIX CODE
-	$self->SUPER::to_verilog('/home/ketan94/ee271Project3/rtl/bbox.vp');
-# START USER CODE FROM /home/ketan94/ee271Project3/rtl/bbox.vp PARSED INTO PACKAGE >>>
-# line 1 "/home/ketan94/ee271Project3/rtl/bbox.vp"
+	$self->SUPER::to_verilog('/home/aroushan/ee271/ee271ProjP3/rtl/bbox.vp');
+# START USER CODE FROM /home/aroushan/ee271/ee271ProjP3/rtl/bbox.vp PARSED INTO PACKAGE >>>
+# line 1 "/home/aroushan/ee271/ee271ProjP3/rtl/bbox.vp"
 print { $self->{OutfileHandle} } '/*';print { $self->{OutfileHandle} } "\n"; 
 print { $self->{OutfileHandle} } ' * Bounding Box Module';print { $self->{OutfileHandle} } "\n"; 
 print { $self->{OutfileHandle} } ' *     ';print { $self->{OutfileHandle} } "\n"; 
@@ -293,21 +293,14 @@ print { $self->{OutfileHandle} } '';print { $self->{OutfileHandle} } "\n";
 print { $self->{OutfileHandle} } '';print { $self->{OutfileHandle} } "\n"; 
 print { $self->{OutfileHandle} } '  ';print { $self->{OutfileHandle} } "\n"; 
 print { $self->{OutfileHandle} } '   //Finding the aliasing sig bit';print { $self->{OutfileHandle} } "\n"; 
+my $alias_sig = 0; 
+for(my $k=0; $k<4;$k++){
 print { $self->{OutfileHandle} } 'always_comb begin';print { $self->{OutfileHandle} } "\n"; 
-print { $self->{OutfileHandle} } '   if (subSample_RnnnnU[0] == 1)begin ';print { $self->{OutfileHandle} } "\n"; 
-       my $alias_sig = 3;
+print { $self->{OutfileHandle} } '    if(subSample_RnnnnU & (1<<'; print { $self->{OutfileHandle} } $k; print { $self->{OutfileHandle} } ') == (1<<'; print { $self->{OutfileHandle} } $k; print { $self->{OutfileHandle} } '))begin ';print { $self->{OutfileHandle} } "\n"; 
+       $alias_sig = `$k`;
+print { $self->{OutfileHandle} } '    end';print { $self->{OutfileHandle} } "\n"; 
 print { $self->{OutfileHandle} } 'end';print { $self->{OutfileHandle} } "\n"; 
-print { $self->{OutfileHandle} } '   else if(subSample_RnnnnU[1] == 1) begin ';print { $self->{OutfileHandle} } "\n"; 
-        my $alias_sig = 2; 
-print { $self->{OutfileHandle} } 'end';print { $self->{OutfileHandle} } "\n"; 
-print { $self->{OutfileHandle} } '   else if(subSample_RnnnnU[2] == 1)begin ';print { $self->{OutfileHandle} } "\n"; 
-        my $alias_sig = 1;
-print { $self->{OutfileHandle} } 'end';print { $self->{OutfileHandle} } "\n"; 
-print { $self->{OutfileHandle} } '   else if(subSample_RnnnnU[3] == 1)begin ';print { $self->{OutfileHandle} } "\n"; 
-         my $alias_sig = 0;
-print { $self->{OutfileHandle} } 'end';print { $self->{OutfileHandle} } "\n"; 
-print { $self->{OutfileHandle} } '';print { $self->{OutfileHandle} } "\n"; 
-print { $self->{OutfileHandle} } 'end';print { $self->{OutfileHandle} } "\n"; 
+}
 print { $self->{OutfileHandle} } ' ';print { $self->{OutfileHandle} } "\n"; 
 print { $self->{OutfileHandle} } '   //Round LowerLeft and UpperRight for X and Y';print { $self->{OutfileHandle} } "\n"; 
     for( my $i = 0 ; $i < 2 ; $i++ ) {
@@ -324,7 +317,7 @@ print { $self->{OutfileHandle} } '      rounded_box_R10S['; print { $self->{Outf
 print { $self->{OutfileHandle} } '';print { $self->{OutfileHandle} } "\n"; 
 print { $self->{OutfileHandle} } '   end // always_comb';print { $self->{OutfileHandle} } "\n"; 
 print { $self->{OutfileHandle} } '';print { $self->{OutfileHandle} } "\n"; 
-   		}
+   }
     }
 print { $self->{OutfileHandle} } '';print { $self->{OutfileHandle} } "\n"; 
 print { $self->{OutfileHandle} } '   // ***************** End of Step 2 *********************';print { $self->{OutfileHandle} } "\n"; 
@@ -475,7 +468,7 @@ print { $self->{OutfileHandle} } '';print { $self->{OutfileHandle} } "\n";
 print { $self->{OutfileHandle} } '';print { $self->{OutfileHandle} } "\n"; 
 print { $self->{OutfileHandle} } '';print { $self->{OutfileHandle} } "\n"; 
 print { $self->{OutfileHandle} } '';print { $self->{OutfileHandle} } "\n"; 
-# <<< END USER CODE FROM /home/ketan94/ee271Project3/rtl/bbox.vp PARSED INTO PACKAGE
+# <<< END USER CODE FROM /home/aroushan/ee271/ee271ProjP3/rtl/bbox.vp PARSED INTO PACKAGE
 
 
       # START PRE-GENERATED TO_VERILOG SUFFIX CODE >>>

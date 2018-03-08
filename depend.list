@@ -14,9 +14,9 @@ src rast_driver.vp
 src dff2.vp
 src tree_hash.vp
 src dff.vp
-src test_iterator.vp
 src sampletest.vp
 src bbox.vp
 src dff3.vp
+src test_iterator.vp
 src hash_jtree.vp
 src rast.vp

@@ -12,19 +12,19 @@
 //	-----------------------------------------------
 //	
 //
-//  Source file: /home/ketan94/ee271Project3/verif/bbx_sb.vp
+//  Source file: /home/aroushan/ee271/ee271ProjP3/verif/bbx_sb.vp
 //  Source template: bbx_sb
 //
 // --------------- Begin Pre-Generation Parameters Status Report ---------------
 //
 //	From 'generate' statement (priority=5):
-// Parameter Axis 	= 3
-// Parameter Vertices 	= 3
-// Parameter Filename 	= sb_log/bbx_sb.log
 // Parameter SigFig 	= 24
 // Parameter Colors 	= 3
-// Parameter PipelineDepth 	= 3
 // Parameter Radix 	= 10
+// Parameter PipelineDepth 	= 3
+// Parameter Filename 	= sb_log/bbx_sb.log
+// Parameter Axis 	= 3
+// Parameter Vertices 	= 3
 //
 //		---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
 //

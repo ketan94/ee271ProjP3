@@ -4,7 +4,7 @@
 +cli+1
 +incdir+/afs/ir.stanford.edu/class/ee/synopsys/syn/M-2016.12-SP2/dw/sim_ver/
 +incdir+/afs/ir.stanford.edu/class/ee/synopsys/syn/M-2016.12-SP2/packages/gtech/src_ver/
-+incdir+/home/ketan94/ee271Project3
++incdir+/home/aroushan/ee271/ee271ProjP3
 +itf+/afs/ir.stanford.edu/class/ee/synopsys/vcs/M-2017.03/linux64/lib/vcsdp.tab
 +libext+.v
 +lint=PCWM
@@ -21,10 +21,10 @@
 -Mcrt0=
 -Mcrtn=
 -Mcsrc=
--Mexternalobj=/home/ketan94/ee271Project3/gold/rastBBox_fix_sv.o
+-Mexternalobj=/home/aroushan/ee271/ee271ProjP3/gold/rastBBox_fix_sv.o
 -Mldflags=-L/usr/lib/x86_64-linux-gnu -L/lib/x86_64-linux-gnu -Wl,--no-as-needed
 -Mloader=gcc
--Mobjects=/home/ketan94/ee271Project3/gold/rastBBox_fix_sv.o /afs/ir.stanford.edu/class/ee/synopsys/vcs/M-2017.03/linux64/lib/libvirsim.so /afs/ir.stanford.edu/class/ee/synopsys/vcs/M-2017.03/linux64/lib/liberrorinf.so /afs/ir.stanford.edu/class/ee/synopsys/vcs/M-2017.03/linux64/lib/libsnpsmalloc.so
+-Mobjects=/home/aroushan/ee271/ee271ProjP3/gold/rastBBox_fix_sv.o /afs/ir.stanford.edu/class/ee/synopsys/vcs/M-2017.03/linux64/lib/libvirsim.so /afs/ir.stanford.edu/class/ee/synopsys/vcs/M-2017.03/linux64/lib/liberrorinf.so /afs/ir.stanford.edu/class/ee/synopsys/vcs/M-2017.03/linux64/lib/libsnpsmalloc.so
 -Mout=simv
 -Msaverestoreobj=/afs/ir.stanford.edu/class/ee/synopsys/vcs/M-2017.03/linux64/lib/vcs_save_restore_new.o
 -Msyslibs=-ldl
@@ -49,10 +49,10 @@
 /afs/ir.stanford.edu/class/ee/synopsys/syn/M-2016.12-SP2/dw/sim_ver/
 /afs/ir.stanford.edu/class/ee/synopsys/syn/M-2016.12-SP2/packages/gtech/src_ver/
 /afs/ir.stanford.edu/class/ee/synopsys/vcs/M-2017.03/linux64/bin/vcs1
-/home/ketan94/ee271Project3
+/home/aroushan/ee271/ee271ProjP3
 top_rast
 95
-sysc_uni_pwd=/home/ketan94/ee271Project3
+sysc_uni_pwd=/home/aroushan/ee271/ee271ProjP3
 _VIRTUALENVWRAPPER_API= mkvirtualenv rmvirtualenv lsvirtualenv showvirtualenv workon add2virtualenv cdsitepackages cdvirtualenv lssitepackages toggleglobalsitepackages cpvirtualenv setvirtualenvproject mkproject cdproject mktmpenv mkvirtualenv rmvirtualenv lsvirtualenv showvirtualenv workon add2virtualenv cdsitepackages cdvirtualenv lssitepackages toggleglobalsitepackages cpvirtualenv setvirtualenvproject mkproject cdproject mktmpenv
 _ModuleTable_Sz_=7
 _ModuleTable007_=dG9vbHMiLCIvZmFybXNoYXJlL3NvZnR3YXJlL21vZHVsZXMvQ29yZSIsfSxbInN5c3RlbUJhc2VNUEFUSCJdPSIvZmFybXNoYXJlL3NvZnR3YXJlL21vZHVsZXMvQ29yZSIsWyJ2ZXJzaW9uIl09Mix9
@@ -63,8 +63,8 @@ _ModuleTable003_=VD17fSxbInNob3J0Il09ImN4IixbInN0YXR1cyJdPSJhY3RpdmUiLH0sZ2VuZXN
 _ModuleTable002_=YWN0aXZlIix9LGNkZXNpZ25lcj17WyJGTiJdPSIvYWZzL2lyLnN0YW5mb3JkLmVkdS9jbGFzcy9lZS9tb2R1bGVzL21vZHVsZWZpbGVzL3Rvb2xzL2NkZXNpZ25lci9GLTIwMTEuMDktU1AyIixbImRlZmF1bHQiXT0xLFsiZnVsbE5hbWUiXT0iY2Rlc2lnbmVyL0YtMjAxMS4wOS1TUDIiLFsibG9hZE9yZGVyIl09Nixwcm9wVD17fSxbInNob3J0Il09ImNkZXNpZ25lciIsWyJzdGF0dXMiXT0iYWN0aXZlIix9LGN4PXtbIkZOIl09Ii9hZnMvaXIuc3RhbmZvcmQuZWR1L2NsYXNzL2VlL21vZHVsZXMvbW9kdWxlZmlsZXMvdG9vbHMvY3gvRi0yMDExLjA5LVNQMiIsWyJkZWZhdWx0Il09MSxbImZ1bGxOYW1lIl09ImN4L0YtMjAxMS4wOS1TUDIiLFsibG9hZE9yZGVyIl09OSxwcm9w
 _ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJhY3RpdmVTaXplIl09MTAsYmFzZU1wYXRoQT17Ii9hZnMvaXIuc3RhbmZvcmQuZWR1L2NsYXNzL2VlL21vZHVsZXMvbW9kdWxlZmlsZXMvdG9vbHMiLCIvZmFybXNoYXJlL3NvZnR3YXJlL21vZHVsZXMvQ29yZSIsfSxbImNfcmVidWlsZFRpbWUiXT1mYWxzZSxbImNfc2hvcnRUaW1lIl09ZmFsc2UsZmFtaWx5PXt9LGluYWN0aXZlPXt9LG1UPXtiYXNlPXtbIkZOIl09Ii9hZnMvaXIuc3RhbmZvcmQuZWR1L2NsYXNzL2VlL21vZHVsZXMvbW9kdWxlZmlsZXMvdG9vbHMvYmFzZS8xLjAiLFsiZGVmYXVsdCJdPTEsWyJmdWxsTmFtZSJdPSJiYXNlLzEuMCIsWyJsb2FkT3JkZXIiXT0xLHByb3BUPXt9LFsic2hvcnQiXT0iYmFzZSIsWyJzdGF0dXMiXT0i
 _LMFILES_=/afs/ir.stanford.edu/class/ee/modules/modulefiles/tools/base/1.0:/afs/ir.stanford.edu/class/ee/modules/modulefiles/tools/genesis2/latest:/afs/ir.stanford.edu/class/ee/modules/modulefiles/tools/syn/latest:/afs/ir.stanford.edu/class/ee/modules/modulefiles/tools/vcs/latest:/afs/ir.stanford.edu/class/ee/modules/modulefiles/tools/synopsys_edk/2011:/afs/ir.stanford.edu/class/ee/modules/modulefiles/tools/cdesigner/F-2011.09-SP2:/afs/ir.stanford.edu/class/ee/modules/modulefiles/tools/hercules/B-2008.09-SP4:/afs/ir.stanford.edu/class/ee/modules/modulefiles/tools/starrc/F-2011.12-SP2:/afs/ir.stanford.edu/class/ee/modules/modulefiles/tools/cx/F-2011.09-SP2:/afs/ir.stanford.edu/class/ee/modules/modulefiles/tools/synopsys_pdk/2011
-XDG_SESSION_ID=3616
-XDG_RUNTIME_DIR=/run/user/312786
+XDG_SESSION_ID=3268
+XDG_RUNTIME_DIR=/run/user/316184
 XDG_DATA_DIRS=/usr/local/share:/usr/share:/var/lib/snapd/desktop
 VMR_MODE_FLAG=64
 VIRTUALENVWRAPPER_SCRIPT=/usr/share/virtualenvwrapper/virtualenvwrapper.sh
@@ -84,9 +84,9 @@ SYNOPSYS_STARRC_DIR=/usr/class/ee/synopsys/starrc/F-2011.12-SP2/amd64_starrc
 SYNOPSYS_STARRC=/usr/class/ee/synopsys/starrc/F-2011.12-SP2
 SYNOPSYS_LICENSE=27000@cadlic0.stanford.edu
 SYNOPSYS=/afs/ir.stanford.edu/class/ee/synopsys/syn/M-2016.12-SP2
-SSH_TTY=/dev/pts/35
-SSH_CONNECTION=10.34.188.28 58154 171.67.51.38 22
-SSH_CLIENT=10.34.188.28 58154 22
+SSH_TTY=/dev/pts/55
+SSH_CONNECTION=68.65.169.22 58954 171.67.51.33 22
+SSH_CLIENT=68.65.169.22 58954 22
 SPRINGSOFT_LICENSE=5219@cadlic0.stanford.edu
 SNPS_VCS_INTERNAL_UBUNTU_PRE_LDFLAGS=-Wl,--no-as-needed 
 SNPS_VCS_INTERNAL_LINKER_NEEDS_NO_AS_NEEDED=1
@@ -94,11 +94,11 @@ SNPS_VCS_CLANG_PATH=/fs/src/interfaces/LLVM_Project/QSCM/opt/llvm-3.9.1/linux64
 SNPS_MAX_WAITTIME=7200
 SNPS_MAX_QUEUETIME=7200
 SNPSLMD_QUEUE=true
-SHORT_HOST=RICE08
+SHORT_HOST=RICE03
 SCRNAME=vcs
 SCRIPT_NAME=vcs
 RUN=0
-REMOTEHOST=10.34.188.28
+REMOTEHOST=68.65.169.22
 PYTHONPATH=/afs/ir/class/ee/genesis2/r11012/PythonLibs:/usr/class/ee272/cell_lib//SAED_PDK90nm
 PERL5LIB=/afs/ir/class/ee/genesis2/r11012/gui/configs/install/perlfiles
 PDK_ROOT=/usr/class/ee272/cell_lib//SAED_PDK90nm
@@ -111,11 +111,11 @@ MODULESHOME=/usr/share/lmod/lmod
 MODULEPATH_ROOT=/farmshare/software/modules
 MODULEPATH=/afs/ir.stanford.edu/class/ee/modules/modulefiles/tools:/farmshare/software/modules/Core
 MFLAGS=
-MAKE_TERMOUT=/dev/pts/35
-MAKE_TERMERR=/dev/pts/35
+MAKE_TERMOUT=/dev/pts/55
+MAKE_TERMERR=/dev/pts/55
 MAKEOVERRIDES=${-*-command-variables-*-}
 MAKELEVEL=1
-MAKEFLAGS= -- RUN=+testname=/afs/ir/class/ee271/project/vect/vec_271_01_sv_short.dat
+MAKEFLAGS= -- RUN=”+testname=/afs/ir/class/ee271/project/vect/vec_271_01_sv_short.dat
 LOADEDMODULES=base/1.0:genesis2/latest:syn/latest:vcs/latest:synopsys_edk/2011:cdesigner/F-2011.09-SP2:hercules/B-2008.09-SP4:starrc/F-2011.12-SP2:cx/F-2011.09-SP2:synopsys_pdk/2011
 LMOD_sys=Linux
 LMOD_arch=x86_64
@@ -132,7 +132,7 @@ LIBRARY_PATH=/usr/lib/x86_64-linux-gnu
 LESSOPEN=| /usr/bin/lesspipe %s
 LESSCLOSE=/usr/bin/lesspipe %s %s
 LC_ALL=C
-KRB5CCNAME=FILE:/tmp/krb5cc_312786_3LaAhVHOAL
+KRB5CCNAME=FILE:/tmp/krb5cc_316184_W6LGHCzavT
 J_CC=gcc
 HOSTTYPE=x86_64-linux
 HERCULES_HOME_DIR=/usr/class/ee/synopsys/hercules/B-2008.09-SP4
@@ -152,58 +152,58 @@ BASH_ENV=/usr/share/lmod/lmod/init/bash
 1486865021 /afs/ir.stanford.edu/class/ee/synopsys/syn/M-2016.12-SP2/dw/sim_ver/DW_pl_reg.v
 1487226392 /afs/ir.stanford.edu/class/ee/synopsys/vcs/M-2017.03/linux64/packages/lpa/AN.DB
 1487226386 /afs/ir.stanford.edu/class/ee/synopsys/vcs/M-2017.03/linux64/packages/upf/AN.DB
-1520480030 genesis_verif/top_rast.v
-1520480030 genesis_verif/testbench_unq1.v
-1520480030 genesis_verif/perf_monitor_unq1.v
-1520480030 genesis_verif/smpl_cnt_sb_unq1.v
-1520480030 genesis_verif/dff_unq15.v
-1520480030 genesis_verif/dff2_unq10.v
-1520480029 genesis_verif/dff_unq14.v
-1520480029 genesis_verif/smpl_sb_unq1.v
-1520480029 genesis_verif/dff_unq13.v
-1520480029 genesis_verif/dff2_unq9.v
-1520480029 genesis_verif/dff3_unq7.v
-1520480029 genesis_verif/dff2_unq8.v
-1520480029 genesis_verif/dff_unq12.v
-1520480029 genesis_verif/bbx_sb_unq1.v
-1520480029 genesis_verif/dff_unq11.v
-1520480029 genesis_verif/dff3_unq6.v
-1520480029 genesis_verif/dff2_unq7.v
-1520480029 genesis_verif/dff_unq10.v
-1520480029 genesis_verif/zbuff_unq1.v
-1520480029 genesis_verif/rast_driver_unq1.v
-1520480029 genesis_verif/clocker_unq1.v
-1520480029 genesis_synth/rast.v
-1520480029 genesis_synth/sampletest_unq1.v
-1520480029 genesis_synth/dff_unq9.v
-1520480029 genesis_synth/hash_jtree_unq1.v
-1520480028 genesis_synth/dff_unq8.v
-1520480028 genesis_synth/dff2_unq6.v
-1520480028 genesis_synth/dff3_unq5.v
-1520480028 genesis_synth/dff2_unq5.v
-1520480028 genesis_synth/dff_unq7.v
-1520480028 genesis_synth/tree_hash_unq1.v
-1520480028 genesis_synth/test_iterator_unq1.v
-1520480028 genesis_synth/dff_unq6.v
-1520480028 genesis_synth/dff_unq5.v
-1520480028 genesis_synth/bbox_unq1.v
-1520480028 genesis_synth/dff_unq4.v
-1520480028 genesis_synth/dff3_unq4.v
-1520480028 genesis_synth/dff2_unq4.v
-1520480028 genesis_synth/dff3_unq3.v
-1520480027 genesis_synth/dff2_unq3.v
-1520480027 genesis_synth/dff_unq3.v
-1520480027 genesis_synth/dff_unq2.v
-1520480027 genesis_synth/dff3_unq2.v
-1520480027 genesis_synth/dff2_unq2.v
-1520480027 genesis_synth/dff3_unq1.v
-1520480027 genesis_synth/dff2_unq1.v
-1520480027 genesis_synth/dff_unq1.v
-1520480031 genesis_vlog.vf
+1520488001 genesis_verif/top_rast.v
+1520488001 genesis_verif/testbench_unq1.v
+1520488001 genesis_verif/perf_monitor_unq1.v
+1520488001 genesis_verif/smpl_cnt_sb_unq1.v
+1520488001 genesis_verif/dff_unq15.v
+1520488001 genesis_verif/dff2_unq10.v
+1520488000 genesis_verif/dff_unq14.v
+1520488000 genesis_verif/smpl_sb_unq1.v
+1520488000 genesis_verif/dff_unq13.v
+1520488000 genesis_verif/dff2_unq9.v
+1520488000 genesis_verif/dff3_unq7.v
+1520488000 genesis_verif/dff2_unq8.v
+1520488000 genesis_verif/dff_unq12.v
+1520488000 genesis_verif/bbx_sb_unq1.v
+1520488000 genesis_verif/dff_unq11.v
+1520488000 genesis_verif/dff3_unq6.v
+1520488000 genesis_verif/dff2_unq7.v
+1520488000 genesis_verif/dff_unq10.v
+1520487999 genesis_verif/zbuff_unq1.v
+1520487999 genesis_verif/rast_driver_unq1.v
+1520487999 genesis_verif/clocker_unq1.v
+1520487999 genesis_synth/rast.v
+1520487999 genesis_synth/sampletest_unq1.v
+1520487999 genesis_synth/dff_unq9.v
+1520487999 genesis_synth/hash_jtree_unq1.v
+1520487999 genesis_synth/dff_unq8.v
+1520487999 genesis_synth/dff2_unq6.v
+1520487999 genesis_synth/dff3_unq5.v
+1520487999 genesis_synth/dff2_unq5.v
+1520487999 genesis_synth/dff_unq7.v
+1520487999 genesis_synth/tree_hash_unq1.v
+1520487998 genesis_synth/test_iterator_unq1.v
+1520487998 genesis_synth/dff_unq6.v
+1520487998 genesis_synth/dff_unq5.v
+1520487998 genesis_synth/bbox_unq1.v
+1520487998 genesis_synth/dff_unq4.v
+1520487998 genesis_synth/dff3_unq4.v
+1520487998 genesis_synth/dff2_unq4.v
+1520487998 genesis_synth/dff3_unq3.v
+1520487998 genesis_synth/dff2_unq3.v
+1520487998 genesis_synth/dff_unq3.v
+1520487998 genesis_synth/dff_unq2.v
+1520487998 genesis_synth/dff3_unq2.v
+1520487998 genesis_synth/dff2_unq2.v
+1520487998 genesis_synth/dff3_unq1.v
+1520487997 genesis_synth/dff2_unq1.v
+1520487997 genesis_synth/dff_unq1.v
+1520488001 genesis_vlog.vf
 1487217861 /afs/ir.stanford.edu/class/ee/synopsys/vcs/M-2017.03/linux64/lib/vcsdp.tab
 4
-1520468754 /home/ketan94/ee271Project3/gold/rastBBox_fix_sv.o
+1520483553 /home/aroushan/ee271/ee271ProjP3/gold/rastBBox_fix_sv.o
 1487220396 /afs/ir.stanford.edu/class/ee/synopsys/vcs/M-2017.03/linux64/lib/libvirsim.so
 1487219634 /afs/ir.stanford.edu/class/ee/synopsys/vcs/M-2017.03/linux64/lib/liberrorinf.so
 1487219608 /afs/ir.stanford.edu/class/ee/synopsys/vcs/M-2017.03/linux64/lib/libsnpsmalloc.so
-1520480038 simv.daidir
+1520488007 simv.daidir

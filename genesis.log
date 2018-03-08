@@ -10,19 +10,19 @@ Genesis2::Manager->print_cmdline: Your Complete Genesis2 Command Line:
     -xml empty.xml                                                                                  \
     -parse                                                                                          \
     -srcpath ./                                                                                     \
-    -srcpath /home/ketan94/ee271Project3/rtl                                                        \
-    -srcpath /home/ketan94/ee271Project3/verif                                                      \
+    -srcpath /home/aroushan/ee271/ee271ProjP3/rtl                                                   \
+    -srcpath /home/aroushan/ee271/ee271ProjP3/verif                                                 \
     -incpath ./                                                                                     \
-    -incpath /home/ketan94/ee271Project3/rtl                                                        \
-    -incpath /home/ketan94/ee271Project3/verif                                                      \
+    -incpath /home/aroushan/ee271/ee271ProjP3/rtl                                                   \
+    -incpath /home/aroushan/ee271/ee271ProjP3/verif                                                 \
     -input smpl_cnt_sb.vp gm2rst_monitor.vp top_rast.vp clocker.vp zbuff.vp perf_monitor.vp         \
         trsl2smpl_monitor.vp testbench.vp bbx_sb.vp rst2zbuff_monitor.vp bbx2trsl_monitor.vp        \
-        smpl_sb.vp rast_driver.vp dff2.vp tree_hash.vp dff.vp test_iterator.vp sampletest.vp        \
-        bbox.vp dff3.vp hash_jtree.vp rast.vp                                                       \
+        smpl_sb.vp rast_driver.vp dff2.vp tree_hash.vp dff.vp sampletest.vp bbox.vp dff3.vp         \
+        test_iterator.vp hash_jtree.vp rast.vp                                                      \
     -input smpl_cnt_sb.vp gm2rst_monitor.vp top_rast.vp clocker.vp zbuff.vp perf_monitor.vp         \
         trsl2smpl_monitor.vp testbench.vp bbx_sb.vp rst2zbuff_monitor.vp bbx2trsl_monitor.vp        \
-        smpl_sb.vp rast_driver.vp dff2.vp tree_hash.vp dff.vp test_iterator.vp sampletest.vp        \
-        bbox.vp dff3.vp hash_jtree.vp rast.vp                                                       \
+        smpl_sb.vp rast_driver.vp dff2.vp tree_hash.vp dff.vp sampletest.vp bbox.vp dff3.vp         \
+        test_iterator.vp hash_jtree.vp rast.vp                                                      \
     -debug 0 
 
 -----------------------------------------------
@@ -52,10 +52,10 @@ Genesis2::Manager->parse_files: Now parsing file rast_driver.vp
 Genesis2::Manager->parse_files: Now parsing file dff2.vp
 Genesis2::Manager->parse_files: Now parsing file tree_hash.vp
 Genesis2::Manager->parse_files: Now parsing file dff.vp
-Genesis2::Manager->parse_files: Now parsing file test_iterator.vp
 Genesis2::Manager->parse_files: Now parsing file sampletest.vp
 Genesis2::Manager->parse_files: Now parsing file bbox.vp
 Genesis2::Manager->parse_files: Now parsing file dff3.vp
+Genesis2::Manager->parse_files: Now parsing file test_iterator.vp
 Genesis2::Manager->parse_files: Now parsing file hash_jtree.vp
 Genesis2::Manager->parse_files: Now parsing file rast.vp
 Genesis2::Manager->parse_files: Now parsing file smpl_cnt_sb.vp
@@ -74,10 +74,10 @@ Genesis2::Manager->parse_files: Now parsing file rast_driver.vp
 Genesis2::Manager->parse_files: Now parsing file dff2.vp
 Genesis2::Manager->parse_files: Now parsing file tree_hash.vp
 Genesis2::Manager->parse_files: Now parsing file dff.vp
-Genesis2::Manager->parse_files: Now parsing file test_iterator.vp
 Genesis2::Manager->parse_files: Now parsing file sampletest.vp
 Genesis2::Manager->parse_files: Now parsing file bbox.vp
 Genesis2::Manager->parse_files: Now parsing file dff3.vp
+Genesis2::Manager->parse_files: Now parsing file test_iterator.vp
 Genesis2::Manager->parse_files: Now parsing file hash_jtree.vp
 Genesis2::Manager->parse_files: Now parsing file rast.vp
 Genesis2::Manager->execute: Done With Source File Parsing Phase

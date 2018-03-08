@@ -12,7 +12,7 @@
 //	-----------------------------------------------
 //	
 //
-//  Source file: /home/ketan94/ee271Project3/verif/clocker.vp
+//  Source file: /home/aroushan/ee271/ee271ProjP3/verif/clocker.vp
 //  Source template: clocker
 //
 // --------------- Begin Pre-Generation Parameters Status Report ---------------

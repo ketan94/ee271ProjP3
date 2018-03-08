@@ -12,16 +12,16 @@
 //	-----------------------------------------------
 //	
 //
-//  Source file: /home/ketan94/ee271Project3/rtl/dff2.vp
+//  Source file: /home/aroushan/ee271/ee271ProjP3/rtl/dff2.vp
 //  Source template: dff2
 //
 // --------------- Begin Pre-Generation Parameters Status Report ---------------
 //
 //	From 'generate' statement (priority=5):
 // Parameter PipelineDepth 	= 1
-// Parameter BitWidth 	= 24
-// Parameter Retime 	= NO
 // Parameter ArraySize1 	= 2
+// Parameter Retime 	= NO
+// Parameter BitWidth 	= 24
 //
 //		---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
 //

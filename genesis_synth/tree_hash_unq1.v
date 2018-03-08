@@ -12,14 +12,14 @@
 //	-----------------------------------------------
 //	
 //
-//  Source file: /home/ketan94/ee271Project3/rtl/tree_hash.vp
+//  Source file: /home/aroushan/ee271/ee271ProjP3/rtl/tree_hash.vp
 //  Source template: tree_hash
 //
 // --------------- Begin Pre-Generation Parameters Status Report ---------------
 //
 //	From 'generate' statement (priority=5):
-// Parameter InWidth 	= 40
 // Parameter OutWidth 	= 8
+// Parameter InWidth 	= 40
 //
 //		---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
 //

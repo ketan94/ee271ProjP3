@@ -12,18 +12,18 @@
 //	-----------------------------------------------
 //	
 //
-//  Source file: /home/ketan94/ee271Project3/rtl/bbox.vp
+//  Source file: /home/aroushan/ee271/ee271ProjP3/rtl/bbox.vp
 //  Source template: bbox
 //
 // --------------- Begin Pre-Generation Parameters Status Report ---------------
 //
 //	From 'generate' statement (priority=5):
-// Parameter Colors 	= 3
-// Parameter Vertices 	= 3
-// Parameter SigFig 	= 24
-// Parameter Axis 	= 3
 // Parameter Radix 	= 10
+// Parameter Colors 	= 3
 // Parameter PipelineDepth 	= 3
+// Parameter SigFig 	= 24
+// Parameter Vertices 	= 3
+// Parameter Axis 	= 3
 //
 //		---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
 //
@@ -296,15 +296,20 @@ module bbox_unq1
   
    //Finding the aliasing sig bit
 always_comb begin
-   if (subSample_RnnnnU[0] == 1)begin 
+    if(subSample_RnnnnU & (1<<0) == (1<<0))begin 
+    end
 end
-   else if(subSample_RnnnnU[1] == 1) begin 
+always_comb begin
+    if(subSample_RnnnnU & (1<<1) == (1<<1))begin 
+    end
 end
-   else if(subSample_RnnnnU[2] == 1)begin 
+always_comb begin
+    if(subSample_RnnnnU & (1<<2) == (1<<2))begin 
+    end
 end
-   else if(subSample_RnnnnU[3] == 1)begin 
-end
-
+always_comb begin
+    if(subSample_RnnnnU & (1<<3) == (1<<3))begin 
+    end
 end
  
    //Round LowerLeft and UpperRight for X and Y
@@ -316,7 +321,7 @@ end
 
       //////// PLACE YOUR CODE HERE
       //////// ASSIGN FRACTION PORTION
-      rounded_box_R10S[0][0][10-1:0]= {{0{1'b1}},{10{0}}}; 
+      rounded_box_R10S[0][0][10-1:0]= {{{1'b1}},{10{0}}}; 
 
    end // always_comb
 
@@ -328,7 +333,7 @@ end
 
       //////// PLACE YOUR CODE HERE
       //////// ASSIGN FRACTION PORTION
-      rounded_box_R10S[0][1][10-1:0]= {{0{1'b1}},{10{0}}}; 
+      rounded_box_R10S[0][1][10-1:0]= {{{1'b1}},{10{0}}}; 
 
    end // always_comb
 
@@ -340,7 +345,7 @@ end
 
       //////// PLACE YOUR CODE HERE
       //////// ASSIGN FRACTION PORTION
-      rounded_box_R10S[1][0][10-1:0]= {{0{1'b1}},{10{0}}}; 
+      rounded_box_R10S[1][0][10-1:0]= {{{1'b1}},{10{0}}}; 
 
    end // always_comb
 
@@ -352,7 +357,7 @@ end
 
       //////// PLACE YOUR CODE HERE
       //////// ASSIGN FRACTION PORTION
-      rounded_box_R10S[1][1][10-1:0]= {{0{1'b1}},{10{0}}}; 
+      rounded_box_R10S[1][1][10-1:0]= {{{1'b1}},{10{0}}}; 
 
    end // always_comb
 

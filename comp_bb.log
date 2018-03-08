@@ -5,7 +5,7 @@
 (standard_in) 1: syntax error
 (standard_in) 1: syntax error
                          Chronologic VCS (TM)
-         Version M-2017.03_Full64 -- Wed Mar  7 19:33:53 2018
+         Version M-2017.03_Full64 -- Wed Mar  7 21:46:43 2018
                Copyright (c) 1991-2017 by Synopsys Inc.
                          ALL RIGHTS RESERVED
 
@@ -66,28 +66,28 @@ Top Level Modules:
 TimeScale is 1 ns / 1 ns
 
 Warning-[CWUC] Concatenations with unsized constants
-genesis_synth/bbox_unq1.v, 319
+genesis_synth/bbox_unq1.v, 324
 "0"
   An unsized constant '0' is used in the concatenation. The unsized constant 
   will be used as a 32-bit constant.
 
 
 Warning-[CWUC] Concatenations with unsized constants
-genesis_synth/bbox_unq1.v, 331
+genesis_synth/bbox_unq1.v, 336
 "0"
   An unsized constant '0' is used in the concatenation. The unsized constant 
   will be used as a 32-bit constant.
 
 
 Warning-[CWUC] Concatenations with unsized constants
-genesis_synth/bbox_unq1.v, 343
+genesis_synth/bbox_unq1.v, 348
 "0"
   An unsized constant '0' is used in the concatenation. The unsized constant 
   will be used as a 32-bit constant.
 
 
 Warning-[CWUC] Concatenations with unsized constants
-genesis_synth/bbox_unq1.v, 355
+genesis_synth/bbox_unq1.v, 360
 "0"
   An unsized constant '0' is used in the concatenation. The unsized constant 
   will be used as a 32-bit constant.
@@ -152,22 +152,22 @@ Generating code for _VCSgd_xFwH6
 (standard_in) 1: syntax error
 (standard_in) 1: syntax error
 (standard_in) 1: syntax error
-make[1]: Entering directory '/home/ketan94/ee271Project3/csrc'
-make[1]: Leaving directory '/home/ketan94/ee271Project3/csrc'
+make[1]: Entering directory '/home/aroushan/ee271/ee271ProjP3/csrc'
+make[1]: Leaving directory '/home/aroushan/ee271/ee271ProjP3/csrc'
 (standard_in) 1: syntax error
 (standard_in) 1: syntax error
 (standard_in) 1: syntax error
 (standard_in) 1: syntax error
 (standard_in) 1: syntax error
 (standard_in) 1: syntax error
-make[1]: Entering directory '/home/ketan94/ee271Project3/csrc'
+(standard_in) 1: syntax error
+(standard_in) 1: syntax error
+(standard_in) 1: syntax error
+make[1]: Entering directory '/home/aroushan/ee271/ee271ProjP3/csrc'
 rm -f _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
 ld -shared  -o .//../simv.daidir//_csrc0.so objs/amcQw_d.o 
 rm -f _csrc0.so
 if [ -x ../simv ]; then chmod -x ../simv; fi
-gcc  -o ../simv   -Wl,-rpath-link=./ -Wl,-rpath='$ORIGIN'/simv.daidir/ -Wl,-rpath=./simv.daidir/ -Wl,-rpath='$ORIGIN'/simv.daidir//scsim.db.dir  -L/usr/lib/x86_64-linux-gnu -L/lib/x86_64-linux-gnu -Wl,--no-as-needed  /home/ketan94/ee271Project3/gold/rastBBox_fix_sv.o     _6695_archive_1.so _prev_archive_1.so _csrc0.so  SIM_l.o  _csrc0.so    rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o          /afs/ir.stanford.edu/class/ee/synopsys/vcs/M-2017.03/linux64/lib/libzerosoft_rt_stubs.so /afs/ir.stanford.edu/class/ee/synopsys/vcs/M-2017.03/linux64/lib/libvirsim.so /afs/ir.stanford.edu/class/ee/synopsys/vcs/M-2017.03/linux64/lib/liberrorinf.so /afs/ir.stanford.edu/class/ee/synopsys/vcs/M-2017.03/linux64/lib/libsnpsmalloc.so    /afs/ir.stanford.edu/class/ee/synopsys/vcs/M-2017.03/linux64/lib/libvcsnew.so /afs/ir.stanford.edu/class/ee/synopsys/vcs/M-2017.03/linux64/lib/libsimprofile.so /afs/ir.stanford.edu/class/ee/synopsys/vcs/M-2017.03/linux64/lib/libuclinative.so /afs/ir.stanford.edu/class/ee/synopsys/vcs/M-2017.03/linux64/lib/vcs_tls.o   -Wl,-whole-archive /afs/ir.stanford.edu/class/ee/synopsys/vcs/M-2017.03/linux64/lib/libvcsucli.so -Wl,-no-whole-archive       ./../simv.daidir/vc_hdrs.o    /afs/ir.stanford.edu/class/ee/synopsys/vcs/M-2017.03/linux64/lib/vcs_save_restore_new.o -ldl  -lc -lm -lpthread -ldl 
-(standard_in) 1: syntax error
-(standard_in) 1: syntax error
-(standard_in) 1: syntax error
+gcc  -o ../simv   -Wl,-rpath-link=./ -Wl,-rpath='$ORIGIN'/simv.daidir/ -Wl,-rpath=./simv.daidir/ -Wl,-rpath='$ORIGIN'/simv.daidir//scsim.db.dir  -L/usr/lib/x86_64-linux-gnu -L/lib/x86_64-linux-gnu -Wl,--no-as-needed  /home/aroushan/ee271/ee271ProjP3/gold/rastBBox_fix_sv.o     _31050_archive_1.so _prev_archive_1.so _csrc0.so  SIM_l.o  _csrc0.so    rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o          /afs/ir.stanford.edu/class/ee/synopsys/vcs/M-2017.03/linux64/lib/libzerosoft_rt_stubs.so /afs/ir.stanford.edu/class/ee/synopsys/vcs/M-2017.03/linux64/lib/libvirsim.so /afs/ir.stanford.edu/class/ee/synopsys/vcs/M-2017.03/linux64/lib/liberrorinf.so /afs/ir.stanford.edu/class/ee/synopsys/vcs/M-2017.03/linux64/lib/libsnpsmalloc.so    /afs/ir.stanford.edu/class/ee/synopsys/vcs/M-2017.03/linux64/lib/libvcsnew.so /afs/ir.stanford.edu/class/ee/synopsys/vcs/M-2017.03/linux64/lib/libsimprofile.so /afs/ir.stanford.edu/class/ee/synopsys/vcs/M-2017.03/linux64/lib/libuclinative.so /afs/ir.stanford.edu/class/ee/synopsys/vcs/M-2017.03/linux64/lib/vcs_tls.o   -Wl,-whole-archive /afs/ir.stanford.edu/class/ee/synopsys/vcs/M-2017.03/linux64/lib/libvcsucli.so -Wl,-no-whole-archive       ./../simv.daidir/vc_hdrs.o    /afs/ir.stanford.edu/class/ee/synopsys/vcs/M-2017.03/linux64/lib/vcs_save_restore_new.o -ldl  -lc -lm -lpthread -ldl 
 ../simv up to date
-make[1]: Leaving directory '/home/ketan94/ee271Project3/csrc'
+make[1]: Leaving directory '/home/aroushan/ee271/ee271ProjP3/csrc'

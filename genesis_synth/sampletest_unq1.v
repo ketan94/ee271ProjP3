@@ -12,18 +12,18 @@
 //	-----------------------------------------------
 //	
 //
-//  Source file: /home/ketan94/ee271Project3/rtl/sampletest.vp
+//  Source file: /home/aroushan/ee271/ee271ProjP3/rtl/sampletest.vp
 //  Source template: sampletest
 //
 // --------------- Begin Pre-Generation Parameters Status Report ---------------
 //
 //	From 'generate' statement (priority=5):
-// Parameter PipelineDepth 	= 2
-// Parameter Radix 	= 10
 // Parameter Axis 	= 3
 // Parameter Vertices 	= 3
-// Parameter SigFig 	= 24
+// Parameter Radix 	= 10
 // Parameter Colors 	= 3
+// Parameter PipelineDepth 	= 2
+// Parameter SigFig 	= 24
 //
 //		---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
 //

@@ -26,9 +26,9 @@ sub get_OutfileSuffix {Genesis2::UniqueModule::private_to_me(); return ".v"};
       print STDERR "$self->{BaseModuleName}->to_verilog: Start user code\n" 
 	  if $self->{Debug} & 8;
       # <<< END PRE-GENERATED TO_VERILOG PREFIX CODE
-	$self->SUPER::to_verilog('/home/ketan94/ee271Project3/verif/perf_monitor.vp');
-# START USER CODE FROM /home/ketan94/ee271Project3/verif/perf_monitor.vp PARSED INTO PACKAGE >>>
-# line 1 "/home/ketan94/ee271Project3/verif/perf_monitor.vp"
+	$self->SUPER::to_verilog('/home/aroushan/ee271/ee271ProjP3/verif/perf_monitor.vp');
+# START USER CODE FROM /home/aroushan/ee271/ee271ProjP3/verif/perf_monitor.vp PARSED INTO PACKAGE >>>
+# line 1 "/home/aroushan/ee271/ee271ProjP3/verif/perf_monitor.vp"
 print { $self->{OutfileHandle} } '/*';print { $self->{OutfileHandle} } "\n"; 
 print { $self->{OutfileHandle} } ' * Performance monitor ';print { $self->{OutfileHandle} } "\n"; 
 print { $self->{OutfileHandle} } ' * ';print { $self->{OutfileHandle} } "\n"; 
@@ -180,7 +180,7 @@ print { $self->{OutfileHandle} } '   end';print { $self->{OutfileHandle} } "\n";
 print { $self->{OutfileHandle} } '   //Count the total Number of Valid Samples';print { $self->{OutfileHandle} } "\n"; 
 print { $self->{OutfileHandle} } '';print { $self->{OutfileHandle} } "\n"; 
 print { $self->{OutfileHandle} } 'endmodule';print { $self->{OutfileHandle} } "\n"; 
-# <<< END USER CODE FROM /home/ketan94/ee271Project3/verif/perf_monitor.vp PARSED INTO PACKAGE
+# <<< END USER CODE FROM /home/aroushan/ee271/ee271ProjP3/verif/perf_monitor.vp PARSED INTO PACKAGE
 
 
       # START PRE-GENERATED TO_VERILOG SUFFIX CODE >>>

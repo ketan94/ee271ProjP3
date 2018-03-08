@@ -12,7 +12,7 @@
 //	-----------------------------------------------
 //	
 //
-//  Source file: /home/ketan94/ee271Project3/rtl/dff2.vp
+//  Source file: /home/aroushan/ee271/ee271ProjP3/rtl/dff2.vp
 //  Source template: dff2
 //
 // --------------- Begin Pre-Generation Parameters Status Report ---------------
