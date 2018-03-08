@@ -220,17 +220,17 @@ module `mname()`
    //////// PLACE YOUR CODE HERE
    //////// ASSIGN VALUES TO "box_R10S"
    
-   //; box_R10S [0][0]  = poly_R10S[0][0];     // min x    
-   //; box_R10S [0][1]  = poly_R10S[0][1];     // min y
-   //; box_R10S [1][0]  = poly_R10S[0][0];    // max x
-   //; box_R10S [1][1]  = poly_R10S[0][1];    // max y
+  box_R10S [0][0]  = poly_R10S[0][0];     // min x    
+  box_R10S [0][1]  = poly_R10S[0][1];     // min y
+  box_R10S [1][0]  = poly_R10S[0][0];    // max x
+  box_R10S [1][1]  = poly_R10S[0][1];    // max y
 
    //; for (my $i = 1; $i < $verts; $i++) {
-   //;     box_R10S [0][0] = (poly_R10S[$i][0] < box_R10S[0][0]) ? poly_R10S[$i][0] : box_R10S[0][0]; 
-   //;     box_R10S [0][1] = (poly_R10S[$i][1] < box_R10S[0][1]) ? poly_R10S[$i][1] : box_R10S[0][1]; 
-   //;     box_R10S [1][0] = (poly_R10S[$i][0] > box_R10S[1][0]) ? poly_R10S[$i][0] : box_R10S[1][0]; 
-   //;     box_R10S [1][1] = (poly_R10S[$i][1] > box_R10S[1][1]) ? poly_R10S[$i][1] : box_R10S[1][1]; 
-   //;		
+        box_R10S [0][0] = (poly_R10S[`$i`][0] < box_R10S[0][0]) ? poly_R10S[`$i`][0] : box_R10S[0][0]; 
+        box_R10S [0][1] = (poly_R10S[`$i`][1] < box_R10S[0][1]) ? poly_R10S[`$i`][1] : box_R10S[0][1]; 
+        box_R10S [1][0] = (poly_R10S[`$i`][0] > box_R10S[1][0]) ? poly_R10S[`$i`][0] : box_R10S[1][0]; 
+        box_R10S [1][1] = (poly_R10S[`$i`][1] > box_R10S[1][1]) ? poly_R10S[`$i`][1] : box_R10S[1][1]; 
+   		
    //;}
 
    end
@@ -258,12 +258,25 @@ module `mname()`
    //       to a mask would allow you to do this operation
    //       as a bitwise and operation.
 
+
+
+  
    //Finding the aliasing sig bit
-   //;for (my $k=0;$k<4; $k++){
-   //;	if(subSample_RnnnnU[$k]==1){
-   //;		my $alias_sig=3-$k);
-   //;	}
-   //;}  
+always_comb begin
+   if (subSample_RnnnnU[0] == 1)begin 
+//;       my $alias_sig = 3;
+end
+   else if(subSample_RnnnnU[1] == 1) begin 
+//;        my $alias_sig = 2; 
+end
+   else if(subSample_RnnnnU[2] == 1)begin 
+//;        my $alias_sig = 1;
+end
+   else if(subSample_RnnnnU[3] == 1)begin 
+//;         my $alias_sig = 0;
+end
+
+end
  
    //Round LowerLeft and UpperRight for X and Y
    //; for( my $i = 0 ; $i < 2 ; $i++ ) {
@@ -276,20 +289,8 @@ module `mname()`
 
       //////// PLACE YOUR CODE HERE
       //////// ASSIGN FRACTION PORTION
-    //;if ($alias_sig==0){
-      rounded_box_R10S[`$i`][`$j`][`$radix`-1:0]= `$radix`{0}; 
-    //;}
-    //;elsif($alias_sig==1){
-      rounded_box_R10S[`$i`][`$j`][`$radix`-1:0]= {1,(`$radix`-1){0}}; 
-    //;}	
-    //;elsif($alias_sig==2){
-      rounded_box_R10S[`$i`][`$j`][`$radix`-1:0]= {1,1,(`$radix`-2){0}}; 
-    //;}	
-    //;else{
-      rounded_box_R10S[`$i`][`$j`][`$radix`-1:0]= {1,1,1,(`$radix`-3){0}}; 
-    //;}	
+      rounded_box_R10S[`$i`][`$j`][`$radix`-1:0]= {{`$alias_sig`{1'b1}},{`$radix-$alias_sig`{0}}}; 
 
-      
    end // always_comb
 
    //;		}
@@ -310,16 +311,16 @@ module `mname()`
 
       //////// PLACE YOUR CODE HERE
       //////// ASSIGN "out_box_R10S" and "outvalid_R10H"
-   outvalid_R10H= 1;
+   outvalid_R10H= 1'b1;
 
-  //;if (rounded_box_R10S[1][0] < 0 || rounded_box_R10S[1][1] < 0  || rounded_box_R10S[0][0] > screen_RnnnnS[0] || rounded_box_R10S[1][1] > screen_RnnnnS[1]) {
-        outvalid_R10H = 0;
-  //;}
+  if (rounded_box_R10S[1][0] < 0 || rounded_box_R10S[1][1] < 0  || rounded_box_R10S[0][0] > screen_RnnnnS[0] || rounded_box_R10S[1][1] > screen_RnnnnS[1]) begin 
+     outvalid_R10H = 1'b0;
+  end
   
-  //;rounded_box_R10S[1][0] = rounded_box_R10S[1][0] > screen_RnnnnS[0] ? screen_RnnnnS[0] : rounded_box_R10S[1][0];
-  //;rounded_box_R10S[1][1] = rounded_box_R10S[1][1] > screen_RnnnnS[1] ?screen_RnnnnS[1]  : rounded_box_R10S[1][1];
-  //;rounded_box_R10S[0][0] = rounded_box_R10S[0][0] < 0 ? 0 : rounded_box_R10S[0][0]; 
-  //;rounded_box_R10S[0][1] = rounded_box_R10S[0][1] < 0 ? 0 : rounded_box_R10S[0][1]; 
+  out_box_R10S[1][0] = rounded_box_R10S[1][0] > screen_RnnnnS[0] ? screen_RnnnnS[0] : rounded_box_R10S[1][0];
+  out_box_R10S[1][1] = rounded_box_R10S[1][1] > screen_RnnnnS[1] ?screen_RnnnnS[1]  : rounded_box_R10S[1][1];
+  out_box_R10S[0][0] = rounded_box_R10S[0][0] < 0 ? 0 : rounded_box_R10S[0][0]; 
+  out_box_R10S[0][1] = rounded_box_R10S[0][1] < 0 ? 0 : rounded_box_R10S[0][1]; 
   
 
    end
