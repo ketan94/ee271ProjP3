@@ -262,15 +262,6 @@ module `mname()`
 
   
    //Finding the aliasing sig bit
-//;my $alias_sig = 0; 
-//;for(my $k=0; $k<4;$k++){
-always_comb begin
-    if(subSample_RnnnnU & (1<<`$k`) == (1<<`$k`))begin 
-//;       $alias_sig = `$k`;
-    end
-end
-//;}
- 
    //Round LowerLeft and UpperRight for X and Y
    //; for( my $i = 0 ; $i < 2 ; $i++ ) {
    //; 	for( my $j = 0 ; $j < 2 ; $j++ ) {
@@ -280,9 +271,17 @@ end
       rounded_box_R10S[`$i`][`$j`][`$sig_fig`-1:`$radix`] 
      = box_R10S[`$i`][`$j`][`$sig_fig`-1:`$radix`];
 
+
       //////// PLACE YOUR CODE HERE
       //////// ASSIGN FRACTION PORTION
-      rounded_box_R10S[`$i`][`$j`][`$radix`-1:0]= {{`$alias_sig`{1'b1}},{`$radix-$alias_sig`{0}}}; 
+
+	  unique case(subSample_RnnnnU)
+	  	4'b0001:rounded_box_R10S[`$i`][`$j`][`$radix`-1:0]= {box_R10S[`$i`][`$j`][`$radix`:`$radix`-3],{`$radix`-3{1'b0}}}; 
+	  	4'b0010:rounded_box_R10S[`$i`][`$j`][`$radix`-1:0]= {box_R10S[`$i`][`$j`][`$radix`:`$radix`-2],{`$radix`-2{1'b0}}}; 
+	  	4'b0100:rounded_box_R10S[`$i`][`$j`][`$radix`-1:0]= {box_R10S[`$i`][`$j`][`$radix`:`$radix`-1],{`$radix`-1{1'b0}}}; 
+	  	4'b1000:rounded_box_R10S[`$i`][`$j`][`$radix`-1:0]= {box_R10S[`$i`][`$j`][`$radix`:`$radix`-0],{`$radix`-0{1'b0}}}; 
+	  endcase
+      
 
    end // always_comb
 
