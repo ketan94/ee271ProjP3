@@ -274,12 +274,14 @@ module `mname()`
 
       //////// PLACE YOUR CODE HERE
       //////// ASSIGN FRACTION PORTION
+      rounded_box_R10S[`$i`][`$j`][`$radix`-4:0] 
+     = `$radix-3`'b0;
 
 	  unique case(subSample_RnnnnU)
-	  	4'b0001:rounded_box_R10S[`$i`][`$j`][`$radix`-1:0]= {box_R10S[`$i`][`$j`][`$radix`:`$radix`-3],{`$radix`-3{1'b0}}}; 
-	  	4'b0010:rounded_box_R10S[`$i`][`$j`][`$radix`-1:0]= {box_R10S[`$i`][`$j`][`$radix`:`$radix`-2],{`$radix`-2{1'b0}}}; 
-	  	4'b0100:rounded_box_R10S[`$i`][`$j`][`$radix`-1:0]= {box_R10S[`$i`][`$j`][`$radix`:`$radix`-1],{`$radix`-1{1'b0}}}; 
-	  	4'b1000:rounded_box_R10S[`$i`][`$j`][`$radix`-1:0]= {box_R10S[`$i`][`$j`][`$radix`:`$radix`-0],{`$radix`-0{1'b0}}}; 
+	  	4'b0001:rounded_box_R10S[`$i`][`$j`][`$radix`-1:`$radix`-3]= {box_R10S[`$i`][`$j`][`$radix`-1:`$radix`-3]}; 
+	  	4'b0010:rounded_box_R10S[`$i`][`$j`][`$radix`-1:`$radix`-3]= {box_R10S[`$i`][`$j`][`$radix`-1:`$radix`-2],1'b0}; 
+	  	4'b0100:rounded_box_R10S[`$i`][`$j`][`$radix`-1:`$radix`-3]= {box_R10S[`$i`][`$j`][`$radix`-1],{2{1'b0}}}; 
+	  	4'b1000:rounded_box_R10S[`$i`][`$j`][`$radix`-1:`$radix`-3]= {3'b0}; 
 	  endcase
       
 
@@ -305,7 +307,7 @@ module `mname()`
       //////// ASSIGN "out_box_R10S" and "outvalid_R10H"
    outvalid_R10H= 1'b1;
 
-  if (rounded_box_R10S[1][0] < 0 || rounded_box_R10S[1][1] < 0  || rounded_box_R10S[0][0] > screen_RnnnnS[0] || rounded_box_R10S[1][1] > screen_RnnnnS[1]) begin 
+  if (rounded_box_R10S[1][0] < 0 || rounded_box_R10S[1][1] < 0  || rounded_box_R10S[0][0] >= screen_RnnnnS[0] || rounded_box_R10S[1][1] >= screen_RnnnnS[1]) begin 
      outvalid_R10H = 1'b0;
   end
   
