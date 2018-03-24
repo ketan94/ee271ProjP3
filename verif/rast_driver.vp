@@ -56,6 +56,7 @@
 
 module `mname()` 
  (
+   input logic validPoly_R13H,
    input logic halt_RnnnnL ,       // Input: Indicates No Work Should Be Done
 
    input logic rst,                // Input: Reset
@@ -187,8 +188,7 @@ module `mname()`
 	 // Now start driving the signals
 	 while (!$feof(fh)) begin
 	     // Wait until the design is ready (unhalted)
-	    while( ! halt_RnnnnL ) @(posedge clk);
-
+         while( !(!validPoly_R13H || halt_RnnnnL)) @(posedge clk);
 	    // read a polygon from the file\
 	    // Need to fix conversion tool to include depth
 	    // Data is strongly dependent on parameterization

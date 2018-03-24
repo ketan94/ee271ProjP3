@@ -63,13 +63,17 @@ module `mname()`
   input logic                        isQuad_R16H,                     // Is Poly Quad?
   input logic                        validSamp_R16H,
   input logic signed   [`$sig_fig`-1:0]  sample_R16S[1:0],
+  input logic signed   [`$sig_fig`-1:0]  sample_R16S_top[1:0],
 			 
   input logic                        clk,                // Clock 
   input logic                        rst,                // Reset
 			 
   input logic signed [`$sig_fig`-1:0]   hit_R18S[`$axis`-1:0],
   input logic signed [`$sig_fig`-1:0]   color_R18U[`$colors`-1:0],
-  input                             hit_valid_R18H 
+  input                             hit_valid_R18H ,
+  input logic signed [`$sig_fig`-1:0]   hit_R18S_top[`$axis`-1:0],
+  input logic signed [`$sig_fig`-1:0]   color_R18U_top[`$colors`-1:0],
+  input                             hit_valid_R18H_top 
 );
 
    //Pipe Signals for Later Evaluation
@@ -78,7 +82,9 @@ module `mname()`
    logic unsigned [`$sig_fig`-1:0]  color_RnnU[`$colors`-1:0];
    logic 		        isQuad_RnnH;                       // Is Poly Quad?
    logic 		        validSamp_RnnH;
-   logic signed   [`$sig_fig`-1:0]  sample_RnnS[1:0];             //
+   logic signed   [`$sig_fig`-1:0]  sample_RnnS[1:0];
+   logic 		        validSamp_RnnH_top;
+   logic signed   [`$sig_fig`-1:0]  sample_RnnS_top[1:0];              //
    //Pipe Signals for Later Evaluation
 
  
@@ -122,7 +128,17 @@ module `mname()`
 	`$d_03->instantiate()` (
 					 .in(sample_R16S) , 
 				     .clk(clk) , .reset(rst), .en(1'b1),
-				     .out(sample_RnnS));				 
+				     .out(sample_RnnS));
+
+        //; my $d_03_top = generate( 'dff2', "d_03_top", 
+	//;                        BitWidth=>$sig_fig,
+	//;                        ArraySize1=>2,
+	//;                        PipelineDepth=>$pipe_depth,
+	//;                        Retime=>'NO' );
+	`$d_03_top->instantiate()` (
+					 .in(sample_R16S_top) , 
+				     .clk(clk) , .reset(rst), .en(1'b1),
+				     .out(sample_RnnS_top));					 
 					 						
 	//; my $d_04 = generate( 'dff', "d_04", 
 	//;                        BitWidth=>2,
@@ -189,6 +205,9 @@ module `mname()`
  	    $fwrite( file , "color.G:%f\t",   `unFix('color_RnnU[1]', $radix)` );
 	    $fwrite( file , "color.B:%f\t",   `unFix('color_RnnU[2]', $radix)` );
 	    $fwrite( file , "hit:%b\n" , hit_valid_R18H );
+            $fwrite( file , "sample.x_top:%f\t",  `unFix('hit_R18S_top[0]', $radix)`  );
+	    $fwrite( file , "sample.y_top:%f\t",  `unFix('hit_R18S_top[1]', $radix)`  );
+	    $fwrite( file , "hit_top:%b\n" , hit_valid_R18H_top);
 	    	    
 	 end else begin // if ( validPoly_R10H )
 	    $fwrite( file , "@%0t: Invalid Sample \n" , $time );

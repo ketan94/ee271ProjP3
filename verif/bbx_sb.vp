@@ -89,6 +89,7 @@ module `mname()`
   input logic signed [`$sig_fig`-1:0] poly_R13S[`$verts`-1:0][`$axis`-1:0] , // 4 Sets X,Y Fixed Point Values
   input logic 			      validPoly_R13H , // Valid Data for Operation
   input logic 			      isQuad_R13H , // Is Poly Quad?
+  input logic [1:0][1:0] 	      invalidate_R10H,
   input logic 			      clk , // Clock 
   input logic 			      rst , // Reset
  
@@ -145,8 +146,8 @@ module `mname()`
 				     ss_w_lg2,                //Subsample
 				     int'(screen_RnnnnS[0] ), //Screen
 				     int'(screen_RnnnnS[1] ), //Screen
-				     int'(validPoly_R13H),  //Polygon Valid
-				     `$radix`,                   //Config
+				     int'(validPoly_RnnH),  //Polygon Valid
+                                     `$radix`,                   //Config
 				     int'( 128'd1 << `$radix` )  //Congig 
 				     )) begin
 
@@ -199,8 +200,8 @@ module `mname()`
 	//;                        Retime=>'NO' );
 	`$d_01->instantiate()` (
 					 .in(poly_R10S) , 
-				     .clk(clk) , .reset(rst), .en(halt_RnnnnL),
-				     .out(poly_RnnS));
+				         .clk(clk) , .reset(rst), .en(!validPoly_R13H || halt_RnnnnL),
+                                         .out(poly_RnnS));
 					 
 	//; my $d_02 = generate( 'dff', "d_02", 
 	//;                        BitWidth=>2,
@@ -208,8 +209,18 @@ module `mname()`
 	//;                        Retime=>'NO' );
 	`$d_02->instantiate()` (
 					 .in({validPoly_R10H, isQuad_R10H}) , 
-				     .clk(clk) , .reset(rst), .en(halt_RnnnnL),
-				     .out({validPoly_RnnH, isQuad_RnnH}));
+				         .clk(clk) , .reset(rst), .en(!validPoly_R13H ||halt_RnnnnL),
+                                         .out({validPoly_RnnH, isQuad_RnnH}));
+
+        //; my $d_03 = generate( 'dff', "d_03", 
+	//;                        BitWidth=>4,
+	//;                        PipelineDepth=>$pipe_depth,
+	//;                        Retime=>'NO' );
+	`$d_03->instantiate()` (
+					 .in(invalidate_R10H) , 
+				     .clk(clk) , .reset(rst), .en(!validPoly_R13H ||halt_RnnnnL),
+				     .out(invalidate_RnnH));
+        
 
    
    always @(posedge clk) begin
